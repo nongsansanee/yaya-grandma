@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yaya vs Grandma</title>
+    <style>
+        :root {
+            --exhausted: 50%;
+            --yayaSize: 1.0;
+            --inLoveWithYaya: 20px;
+            --grandmaSize: 1.0;
+            --inLoveWithGrandma: 20px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5%;
+        }
+        body {
+            background: #BADA55;
+        }
+        img {
+            width: 50vh;
+            height: 50vh;
+        }
+        img.nadej {
+            width: 20vh;
+            height: 20vh;
+            filter: grayscale(var(--exhausted));
+        }
+        img.yaya {
+            margin-right: 5%;
+            transform: scale(var(--yayaSize));
+            filter: blur(var(--inLoveWithYaya));
+        }
+        img.grandma {
+            margin-left: 5%;
+            transform: scale(var(--grandmaSize));
+            filter: blur(var(--inLoveWithGrandma));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="nadej" src="images/nadej.png" alt="nadej">
+    </div>
+    <div class="container">
+        <label for="">
+            Yaya :
+        </label>
+        <input type="range" value="0" min="-100" max="100" width="50%">
+        <label for="">
+            : Grandma
+        </label>
+    </div>
+    <div class="container">
+        <img class="yaya" src="images/yaya.png" alt="Yaya">
+        <img class="grandma" src="images/grandma.png" alt="Grandma">
+    </div>
+</body>
+</html>
