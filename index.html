@@ -62,13 +62,59 @@
     </div>
     <script>
         function handleInput(){
-            console.log(this.value);
+            console.log("this=" + this.value);
             let exhausted = 50 -( this.value/2);
             document.documentElement.style.setProperty("--exhausted",exhausted + "%");
+
+
+
+            let inLoveWithGrandmaPlus = this.value -1;
+            let grandmaSizePlus =  (this.value / 100);
+
+            let inLoveWithYaya = -(this.value)  ;
+            let yayaSize =  -(this.value / 100) ;
+
+            const imgGrandma = document.querySelector("img.grandma");
+            const styleGrandma = document.documentElement.querySelector("img.grandma");
+
+
+            const styleYaya = document.documentElement.querySelector("img.yaya");
+            console.log("aaa=" + imgGrandma);
+            console.log("bbbb=" + styleGrandma);
+
+            if(this.value > 0){
+                console.log("==>" + inLoveWithGrandmaPlus);
+                console.log("s==>" + grandmaSizePlus);
+                document.documentElement.style.setProperty("--grandmaSize",grandmaSizePlus );
+                styleGrandma.style.setProperty("--inLoveWithGrandma",inLoveWithGrandmaPlus );
+               
+             }
+
+             if(this.value < 0){
+                console.log("inLoveWithYaya==>" + inLoveWithYaya);
+                console.log("yayaSize==>" + yayaSize);
+                document.documentElement.style.setProperty("--yayaSize",yayaSize );
+                styleYaya.style.setProperty("--inLoveWithYaya",inLoveWithYaya );
+              
+             }
+
+
+             if(this.value == 0){
+        
+                document.documentElement.style.setProperty("--yayaSize","1.0" );
+                styleYaya.style.setProperty("--inLoveWithYaya","20px" );
+
+                document.documentElement.style.setProperty("--grandmaSize","1.0" );
+                styleGrandma.style.setProperty("--inLoveWithGrandma","20px" );
+             }
+
         }
 
             const input = document.querySelector("input");
             input.addEventListener("input",handleInput);
+
+            // const grandma = document.querySelector(".grandma");
+            // console.log(grandma);
     </script>
 </body>
 </html>
