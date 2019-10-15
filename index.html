@@ -60,5 +60,15 @@
         <img class="yaya" src="images/yaya.png" alt="Yaya">
         <img class="grandma" src="images/grandma.png" alt="Grandma">
     </div>
+    <script>
+        function handleInput(){
+            console.log(this.value);
+            let exhausted = 50 -( this.value/2);
+            document.documentElement.style.setProperty("--exhausted",exhausted + "%");
+        }
+
+            const input = document.querySelector("input");
+            input.addEventListener("input",handleInput);
+    </script>
 </body>
 </html>
